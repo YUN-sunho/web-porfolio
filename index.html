@@ -22,6 +22,39 @@
 	<link rel="stylesheet" href="css/flaticon.css">
 	<link rel="stylesheet" href="css/icomoon.css">
 	<link rel="stylesheet" href="css/style.css">
+
+  <style>
+    #section-counter .block-18 { margin-bottom: 0; }
+    .portfolio-stat-value {
+      display: block;
+      color: #3e64ff;
+      font-size: 1.75rem;
+      line-height: 1.2;
+      margin-bottom: .45rem;
+      font-variant-numeric: tabular-nums;
+    }
+    .portfolio-stat-skills { font-size: clamp(.95rem, 2vw, 1.45rem); }
+    #section-counter .text small { color: #626973; margin-top: .25rem; }
+    #page-4 .resume-wrap[id] { scroll-margin-top: 90px; }
+    .portfolio-project-card {
+      overflow: hidden;
+      border: 1px solid #e7ebf2;
+      border-radius: .65rem;
+      background: #fff;
+    }
+    .portfolio-project-card a { color: inherit; }
+    .portfolio-project-card a:focus-visible { outline: 2px solid #3e64ff; outline-offset: -3px; }
+    .portfolio-project-card a:hover h3, .portfolio-project-card a:focus-visible h3 { color: #3054da; }
+    .portfolio-project-card img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 3 / 2;
+      object-fit: cover;
+      background: #e9edf4;
+    }
+    .portfolio-project-caption { padding: 1.15rem; }
+    .portfolio-image-note { font-size: .75rem; color: #626973; margin-top: .45rem; }
+  </style>
 </head>
 
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
@@ -93,7 +126,7 @@
 							<p>커피와 노트북만 있다면, 언제 어디서나 즐겁게 학습하는 개발자 지망생입니다. </p>
 							<ul class="about-info mt-4 px-md-0 px-2">
 								<li class="d-flex"><span>Name:</span> <span>윤선호</span></li>
-								<li class="d-flex"><span>Address:</span> <span>경기도 남양주시 별내동</span></li>
+								<li class="d-flex"><span>Address:</span> <span>경기도 시흥시 장현동</span></li>
 								<li class="d-flex"><span>Email:</span> <span>yyll001717@gmail.com</span></li>
 								<li class="d-flex"><span>Phone: </span> <span>+82-10-8684-7577</span></li>
 							</ul>
@@ -110,44 +143,48 @@
 		</div>
 	</section>
 
-	<section class="ftco-section ftco-no-pb ftco-counter img" id="section-counter">
-		<div class="container-fluid px-md-5">
-			<div class="row d-md-flex align-items-center">
-				<div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-					<div class="block-18 shadow">
-						<div class="text">
-							<strong class="number">📘</strong>
-							<span>공부한 일수</span>
-						</div>
-					</div>
-				</div>
-				<div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-					<div class="block-18 shadow">
-						<div class="text">
-							<strong style="font-size: 32px;">🚀</strong>
-							<span>Improving Skills</span>
-						</div>
-					</div>
-				</div>
-				<div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-					<div class="block-18 shadow">
-						<div class="text">
-							<strong class="number">🙂</strong>
-							<span>Happy Customers</span>
-						</div>
-					</div>
-				</div>
-				<div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-					<div class="block-18 shadow">
-						<div class="text">
-							<strong class="number" data-number="50">0</strong>
-							<span>Cups of coffee</span>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
+  <section class="ftco-section ftco-no-pb ftco-counter img" id="section-counter">
+    <div class="container-fluid px-md-5">
+      <div class="row justify-content-center">
+        <div class="col-6 col-lg-3 mb-4 d-flex counter-wrap ftco-animate">
+          <div class="block-18 shadow w-100">
+            <div class="text">
+              <strong id="study-days" class="portfolio-stat-value">2,479</strong>
+              <span>공부한 일수</span>
+              <small class="d-block">2020년 2월부터</small>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-lg-3 mb-4 d-flex counter-wrap ftco-animate">
+          <div class="block-18 shadow w-100">
+            <div class="text">
+              <strong class="portfolio-stat-value portfolio-stat-skills">FastAPI · PyTorch</strong>
+              <span>Improving Skills</span>
+              <small class="d-block">백엔드 개발 · 딥러닝</small>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-lg-3 mb-4 d-flex counter-wrap ftco-animate">
+          <div class="block-18 shadow w-100">
+            <div class="text">
+              <strong class="portfolio-stat-value">4</strong>
+              <span>Projects</span>
+              <small class="d-block">기획·개발 프로젝트</small>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-lg-3 mb-4 d-flex counter-wrap ftco-animate">
+          <div class="block-18 shadow w-100">
+            <div class="text">
+              <strong class="portfolio-stat-value">480</strong>
+              <span>Cups of Coffee</span>
+              <small class="d-block">가볍게 잡은 추정치</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
 
 
@@ -249,180 +286,123 @@
 
 					</div>
 					
-					<div id="page-3" class="page three">
-						<h2 class="heading">Skills</h2>
-						<div class="row progress-circle mb-5">
-							<div class="col-lg-4 mb-4">
-								<div class="bg-white rounded-lg shadow p-4">
-									<h2 class="h5 font-weight-bold text-center mb-4">Python</h2>
+              <div id="page-3" class="page three">
+                <h2 class="heading">Skills</h2>
+                <p class="mb-4">프로젝트에 적용한 범위와 전공 실습 경험을 바탕으로 매긴 자체 평가입니다.</p>
+                <div class="row progress-circle mb-4">
+                  <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="bg-white rounded-lg shadow p-4 h-100">
+                      <h3 class="h5 font-weight-bold text-center mb-4">Python</h3>
+                      <div class="progress mx-auto" data-value="80" role="progressbar"
+                        aria-label="Python 자체 평가" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+                        <span class="progress-left"><span class="progress-bar border-primary"></span></span>
+                        <span class="progress-right"><span class="progress-bar border-primary"></span></span>
+                        <div class="progress-value w-100 h-100 rounded-circle d-flex align-items-center justify-content-center">
+                          <div class="h2 font-weight-bold mb-0">80<sup class="small">%</sup></div>
+                        </div>
+                      </div>
+                      <p class="text-center small mt-4 mb-0">추천 API와 이미지 분류 파이프라인</p>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="bg-white rounded-lg shadow p-4 h-100">
+                      <h3 class="h5 font-weight-bold text-center mb-4">Java</h3>
+                      <div class="progress mx-auto" data-value="55" role="progressbar"
+                        aria-label="Java 자체 평가" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100">
+                        <span class="progress-left"><span class="progress-bar border-primary"></span></span>
+                        <span class="progress-right"><span class="progress-bar border-primary"></span></span>
+                        <div class="progress-value w-100 h-100 rounded-circle d-flex align-items-center justify-content-center">
+                          <div class="h2 font-weight-bold mb-0">55<sup class="small">%</sup></div>
+                        </div>
+                      </div>
+                      <p class="text-center small mt-4 mb-0">객체지향 프로그래밍과 전공 실습</p>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="bg-white rounded-lg shadow p-4 h-100">
+                      <h3 class="h5 font-weight-bold text-center mb-4">C Programming</h3>
+                      <div class="progress mx-auto" data-value="60" role="progressbar"
+                        aria-label="C Programming 자체 평가" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
+                        <span class="progress-left"><span class="progress-bar border-primary"></span></span>
+                        <span class="progress-right"><span class="progress-bar border-primary"></span></span>
+                        <div class="progress-value w-100 h-100 rounded-circle d-flex align-items-center justify-content-center">
+                          <div class="h2 font-weight-bold mb-0">60<sup class="small">%</sup></div>
+                        </div>
+                      </div>
+                      <p class="text-center small mt-4 mb-0">프로그래밍 기초와 자료구조 실습</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="progress-wrap ftco-animate">
+                      <h3>FastAPI</h3>
+                      <div class="progress">
+                        <div class="progress-bar color-1" role="progressbar" aria-label="FastAPI 자체 평가"
+                          aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width:75%">
+                          <span>75%</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="progress-wrap ftco-animate">
+                      <h3>PyTorch · 딥러닝</h3>
+                      <div class="progress">
+                        <div class="progress-bar color-2" role="progressbar" aria-label="PyTorch · 딥러닝 자체 평가"
+                          aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width:75%">
+                          <span>75%</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="progress-wrap ftco-animate">
+                      <h3>설명 가능한 AI (XAI)</h3>
+                      <div class="progress">
+                        <div class="progress-bar color-3" role="progressbar" aria-label="설명 가능한 AI (XAI) 자체 평가"
+                          aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">
+                          <span>70%</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="progress-wrap ftco-animate">
+                      <h3>Machine Learning</h3>
+                      <div class="progress">
+                        <div class="progress-bar color-4" role="progressbar" aria-label="Machine Learning 자체 평가"
+                          aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="width:65%">
+                          <span>65%</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="progress-wrap ftco-animate">
+                      <h3>Git · GitHub</h3>
+                      <div class="progress">
+                        <div class="progress-bar color-5" role="progressbar" aria-label="Git · GitHub 자체 평가"
+                          aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="width:65%">
+                          <span>65%</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="progress-wrap ftco-animate">
+                      <h3>AWS EC2 · RDS</h3>
+                      <div class="progress">
+                        <div class="progress-bar color-6" role="progressbar" aria-label="AWS EC2 · RDS 자체 평가"
+                          aria-valuenow="55" aria-valuemin="0" aria-valuemax="100" style="width:55%">
+                          <span>55%</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
-									<!-- Progress bar 1 -->
-									<div class="progress mx-auto" data-value='70'>
-										<span class="progress-left">
-											<span class="progress-bar border-primary"></span>
-										</span>
-										<span class="progress-right">
-											<span class="progress-bar border-primary"></span>
-										</span>
-										<div
-											class="progress-value w-100 h-100 rounded-circle d-flex align-items-center justify-content-center">
-											<div class="h2 font-weight-bold">70<sup class="small">%</sup></div>
-										</div>
-									</div>
-									<!-- END -->
-
-									<!-- Demo info -->
-									<div class="row text-center mt-4">
-										<div class="col-6 border-right">
-											<div class="h4 font-weight-bold mb-0">28%</div><span
-												class="small text-gray">Last week</span>
-										</div>
-										<div class="col-6">
-											<div class="h4 font-weight-bold mb-0">60%</div><span
-												class="small text-gray">Last month</span>
-										</div>
-									</div>
-									<!-- END -->
-								</div>
-							</div>
-
-							<div class="col-lg-4 mb-4">
-								<div class="bg-white rounded-lg shadow p-4">
-									<h2 class="h5 font-weight-bold text-center mb-4">Java</h2>
-
-									<!-- Progress bar 1 -->
-									<div class="progress mx-auto" data-value='60'>
-										<span class="progress-left">
-											<span class="progress-bar border-primary"></span>
-										</span>
-										<span class="progress-right">
-											<span class="progress-bar border-primary"></span>
-										</span>
-										<div
-											class="progress-value w-100 h-100 rounded-circle d-flex align-items-center justify-content-center">
-											<div class="h2 font-weight-bold">60<sup class="small">%</sup></div>
-										</div>
-									</div>
-									<!-- END -->
-
-									<!-- Demo info -->
-									<div class="row text-center mt-4">
-										<div class="col-6 border-right">
-											<div class="h4 font-weight-bold mb-0">28%</div><span
-												class="small text-gray">Last week</span>
-										</div>
-										<div class="col-6">
-											<div class="h4 font-weight-bold mb-0">60%</div><span
-												class="small text-gray">Last month</span>
-										</div>
-									</div>
-									<!-- END -->
-								</div>
-							</div>
-
-							<div class="col-lg-4 mb-4">
-								<div class="bg-white rounded-lg shadow p-4">
-									<h2 class="h5 font-weight-bold text-center mb-4">C Programming</h2>
-
-									<!-- Progress bar 1 -->
-									<div class="progress mx-auto" data-value='65'>
-										<span class="progress-left">
-											<span class="progress-bar border-primary"></span>
-										</span>
-										<span class="progress-right">
-											<span class="progress-bar border-primary"></span>
-										</span>
-										<div
-											class="progress-value w-100 h-100 rounded-circle d-flex align-items-center justify-content-center">
-											<div class="h2 font-weight-bold">65<sup class="small">%</sup></div>
-										</div>
-									</div>
-									<!-- END -->
-
-									<!-- Demo info -->
-									<div class="row text-center mt-4">
-										<div class="col-6 border-right">
-											<div class="h4 font-weight-bold mb-0">28%</div><span
-												class="small text-gray">Last week</span>
-										</div>
-										<div class="col-6">
-											<div class="h4 font-weight-bold mb-0">60%</div><span
-												class="small text-gray">Last month</span>
-										</div>
-									</div>
-									<!-- END -->
-								</div>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-md-6 animate-box">
-								<div class="progress-wrap ftco-animate">
-									<h3>Python for AI</h3>
-									<div class="progress">
-										<div class="progress-bar color-1" role="progressbar" aria-valuenow="70"
-											aria-valuemin="0" aria-valuemax="100" style="width:70%">
-											<span>70%</span>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-6 animate-box">
-								<div class="progress-wrap ftco-animate">
-									<h3>Java</h3>
-									<div class="progress">
-										<div class="progress-bar color-2" role="progressbar" aria-valuenow="65"
-											aria-valuemin="0" aria-valuemax="100" style="width:65%">
-											<span>65%</span>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-6 animate-box">
-								<div class="progress-wrap ftco-animate">
-									<h3>AWS Cloud Basics</h3>
-									<div class="progress">
-										<div class="progress-bar color-3" role="progressbar" aria-valuenow="30"
-											aria-valuemin="0" aria-valuemax="100" style="width:30%">
-											<span>30%</span>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-6 animate-box">
-								<div class="progress-wrap ftco-animate">
-									<h3>C Programming</h3>
-									<div class="progress">
-										<div class="progress-bar color-4" role="progressbar" aria-valuenow="80"
-											aria-valuemin="0" aria-valuemax="100" style="width:80%">
-											<span>80%</span>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-6 animate-box">
-								<div class="progress-wrap ftco-animate">
-									<h3>Machine Learning</h3>
-									<div class="progress">
-										<div class="progress-bar color-5" role="progressbar" aria-valuenow="50"
-											aria-valuemin="0" aria-valuemax="100" style="width:50%">
-											<span>50%</span>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-6 animate-box">
-								<div class="progress-wrap ftco-animate">
-									<h3>Deep Learning</h3>
-									<div class="progress">
-										<div class="progress-bar color-6" role="progressbar" aria-valuenow="40"
-											aria-valuemin="0" aria-valuemax="100" style="width:40%">
-											<span>40%</span>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
 					<div id="page-4" class="page four">
 						<h2 id="projects-section" class="heading">Projects</h2>
             <p class="mb-4">돌봄 현장의 문제를 살피고, AI 결과를 검증하며, 필요한 정보를 화면에 전달한 프로젝트를 소개합니다.</p>
@@ -479,7 +459,7 @@
                 <p class="small mb-0">담당 범위 · API 연동, 주문 조건 후처리, 배포, 화면 연동 테스트</p>
               </div>
             </article>
-						<div class="resume-wrap d-flex ftco-animate">
+						<div class="resume-wrap d-flex ftco-animate" id="metaroad-project">
   <div class="icon d-flex align-items-center justify-content-center">
     <span class="flaticon-ideas"></span>
   </div>
@@ -530,37 +510,65 @@
 	</section>
 
 
-	<section class="ftco-section ftco-project" id="side-projects-section">
-  <div class="container-fluid px-md-0">
-
-    <!-- 사이드 프로젝트 제목 영역 -->
-    <div class="row no-gutters justify-content-center pb-5">
-      <div class="col-md-12 heading-section text-center ftco-animate">
-        <h1 class="big big-2">Side Projects</h1>
-        <h2 class="mb-4">Side Projects</h2>
-        <p>학습과 함께 진행 중인 사이드 프로젝트들입니다.</p>
-      </div>
-    </div>
-
-    <!-- 카드 영역 -->
-    <div class="row no-gutters">
-      <!-- 1. 실제 사이드 프로젝트 (메타로드) -->
-      <div class="col-md-4">
-        <div class="project img ftco-animate d-flex justify-content-center align-items-center"
-          style="background-image: url(images/schedule_banner_wide.png); background-size: cover; background-position: center; height:350px;">
-          <div class="overlay"></div>
-          <div class="text text-center p-4">
-            <h3>스케줄링 / 알람 자동화 시스템</h3>
-            <span>반복업무 · 알람 · 배치 자동화 기반 그룹웨어</span>
-          </div>
+  <section class="ftco-section ftco-project" id="side-projects-section">
+    <div class="container-fluid px-md-5">
+      <div class="row justify-content-center mb-4">
+        <div class="col-md-12 heading-section text-center ftco-animate">
+          <h1 class="big big-2">Side Projects</h1>
+          <h2 class="mb-4">Side Projects</h2>
         </div>
       </div>
-
-
+      <div class="row">
+        <div class="col-sm-6 col-xl-3 mb-4 d-flex">
+          <article class="portfolio-project-card ftco-animate w-100">
+            <a href="#care-records" class="d-block h-100">
+              <img src="images/care-records.jpg" alt="건강기록 화면 구상을 표현한 스마트폰과 혈압계" loading="lazy" decoding="async">
+              <div class="portfolio-project-caption">
+                <h3 class="h5 mb-1">보호자 건강기록 앱</h3>
+                <p class="small mb-0">주간보호센터 · 화면 설계</p>
+                <p class="portfolio-image-note mb-0">프로젝트 콘셉트 이미지</p>
+              </div>
+            </a>
+          </article>
+        </div>
+        <div class="col-sm-6 col-xl-3 mb-4 d-flex">
+          <article class="portfolio-project-card ftco-animate w-100">
+            <a href="#wastecloth-ai" class="d-block h-100">
+              <img src="images/wastecloth-xai.jpg" alt="폐의류 분류를 표현한 재킷에 겹쳐진 예시 히트맵" loading="lazy" decoding="async">
+              <div class="portfolio-project-caption">
+                <h3 class="h5 mb-1">폐의류 분류 및 XAI</h3>
+                <p class="small mb-0">이미지 분류 · 히트맵 검증</p>
+                <p class="portfolio-image-note mb-0">프로젝트 콘셉트 이미지</p>
+              </div>
+            </a>
+          </article>
+        </div>
+        <div class="col-sm-6 col-xl-3 mb-4 d-flex">
+          <article class="portfolio-project-card ftco-animate w-100">
+            <a href="#snack-recommender" class="d-block h-100">
+              <img src="images/snack-recommendation.jpg" alt="사무실 간식 상자와 추천 목록을 표현한 태블릿" loading="lazy" decoding="async">
+              <div class="portfolio-project-caption">
+                <h3 class="h5 mb-1">기업 간식 구독 추천</h3>
+                <p class="small mb-0">자연어 추천 · FastAPI 백엔드</p>
+                <p class="portfolio-image-note mb-0">프로젝트 콘셉트 이미지</p>
+              </div>
+            </a>
+          </article>
+        </div>
+        <div class="col-sm-6 col-xl-3 mb-4 d-flex">
+          <article class="portfolio-project-card ftco-animate w-100">
+            <a href="#metaroad-project" class="d-block h-100">
+              <img src="images/schedule_banner_wide.png" alt="스케줄링과 알람 자동화 시스템 배너" loading="lazy" decoding="async">
+              <div class="portfolio-project-caption">
+                <h3 class="h5 mb-1">Metaroad 업무 자동화</h3>
+                <p class="small mb-0">반복업무 · 스케줄링 · 알람</p>
+              </div>
+            </a>
+          </article>
+        </div>
+      </div>
     </div>
-
-  </div>
-</section>
+  </section>
 
 
 	<section class="ftco-section" id="blog-section">
@@ -613,7 +621,7 @@
 						</div>
 						<div>
 							<h3 class="mb-4">Address</h3>
-							<p>경기도 남양주시 별내동</p>
+							<p>경기도 시흥시 장현동</p>
 						</div>
 					</div>
 				</div>
@@ -698,6 +706,19 @@
 	<script src="js/scrollax.min.js"></script>
 
 	<script src="js/main.js"></script>
+
+
+  <script>
+    const studyCalendar = new Intl.DateTimeFormat('ko-KR', {
+      timeZone: 'Asia/Seoul', year: 'numeric', month: 'numeric', day: 'numeric'
+    });
+    const studyDate = Object.fromEntries(studyCalendar.formatToParts(new Date())
+      .map(({ type, value }) => [type, Number(value)]));
+    const studyStart = Date.UTC(2020, 1, 1);
+    const studyToday = Date.UTC(studyDate.year, studyDate.month - 1, studyDate.day);
+    const studyDays = Math.max(0, (studyToday - studyStart) / 86400000);
+    document.getElementById('study-days').textContent = studyDays.toLocaleString('ko-KR');
+  </script>
 
 </body>
 

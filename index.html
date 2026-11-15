@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 
 <head>
 	<title>개발자 윤선호</title>
@@ -404,6 +404,45 @@
 					</div>
 					<div id="page-4" class="page four">
 						<h2 id="projects-section" class="heading">Projects</h2>
+            <p class="mb-4">돌봄 현장의 문제를 살피고, AI 결과를 검증하며, 필요한 정보를 화면에 전달한 프로젝트를 소개합니다.</p>
+            <article class="resume-wrap d-flex ftco-animate" id="care-records" aria-labelledby="care-records-title">
+              <div class="icon d-flex align-items-center justify-content-center" aria-hidden="true">
+                <span class="flaticon-ideas"></span>
+              </div>
+              <div class="text pl-3" style="min-width: 0; overflow-wrap: anywhere;">
+                <p class="date mb-2">현장 문제 탐색 · 화면 설계</p>
+                <h3 id="care-records-title" class="h4 mb-3">주간보호센터 보호자 건강기록 앱</h3>
+                <p>보호자가 혈압이나 혈당을 문의하면 센터가 케어포의 기록을 다시 찾아 전화나 문자로 전달했습니다. 이 과정을 줄이기 위해 직원이 확인한 기록을 보호자가 직접 조회하는 흐름을 설계했습니다.</p>
+                <p><strong>설계</strong> · 센터의 욕구사정 자료를 AI가 정리해 어르신별 우선 확인 항목을 제안하고, 직원이 확인한 뒤 화면에 반영하는 구상입니다. 보호자는 최근 측정값과 측정 시각, 날짜별 기록을 확인할 수 있습니다.</p>
+                <p class="mb-0"><strong>가상 기록으로 화면과 이용 흐름을 구체화했습니다.</strong></p>
+              </div>
+            </article>
+
+            <article class="resume-wrap d-flex ftco-animate" id="wastecloth-ai" aria-labelledby="wastecloth-ai-title">
+              <div class="icon d-flex align-items-center justify-content-center" aria-hidden="true">
+                <span class="flaticon-ideas"></span>
+              </div>
+              <div class="text pl-3" style="min-width: 0; overflow-wrap: anywhere;">
+                <p class="date mb-2">개인 AI 프로젝트 · 모델 검증</p>
+                <h3 id="wastecloth-ai-title" class="h4 mb-3">폐의류 분류 및 XAI 선별 보조</h3>
+                <p>약 3,000장의 이미지로 의류 종류와 상태를 구분하는 데모를 만들었습니다. EfficientNetV2 기반 분류 결과에 히트맵을 표시해 판정을 검토할 때 참고할 수 있게 했습니다.</p>
+                <p><strong>검증</strong> · 정상으로 분류한 블라우스 사진에서도 배경과 테두리가 강조돼, 예측과 시각화를 따로 평가했습니다. 같은 입력에 Grad-CAM++, EigenCAM, Saliency를 적용하고 의류 영역과 테두리의 강조 분포를 비교했습니다. 히트맵 계산에 쓰는 층도 공간 어텐션 층에서 백본 합성곱 층으로 바꿨습니다.</p>
+                <p class="mb-0"><strong>의류 종류 분류 검증 Macro F1 0.9399 · 최종 시각화의 의류 영역 집중도 평균 약 0.84</strong></p>
+              </div>
+            </article>
+
+            <article class="resume-wrap d-flex ftco-animate" id="snack-recommender" aria-labelledby="snack-recommender-title">
+              <div class="icon d-flex align-items-center justify-content-center" aria-hidden="true">
+                <span class="flaticon-ideas"></span>
+              </div>
+              <div class="text pl-3" style="min-width: 0; overflow-wrap: anywhere;">
+                <p class="date mb-2">팀 프로젝트 · 백엔드</p>
+                <h3 id="snack-recommender-title" class="h4 mb-3">기업 간식 구독 추천 서비스</h3>
+                <p>팀의 AI 추천 엔진을 FastAPI에 연동하고 AWS EC2와 RDS PostgreSQL을 연결했습니다. 자연어로 요청한 예산, 구성비, 제로 음료 조건을 추천 결과에 반영하는 응답 처리를 맡았습니다.</p>
+                <p><strong>협업</strong> · 프론트엔드 담당자는 상품을 분류별로 모아 전체 조합을 쉽게 보고 싶어 했습니다. 실제 화면과 API 응답을 대조하고, 기존 목록이 추천 우선순위를 담고 있다는 점을 설명했습니다. 추천 순서를 유지한 목록과 카테고리별 목록을 API에서 함께 제공했습니다.</p>
+                <p class="mb-0"><strong>응답 필드 · <code>recommendations</code> / <code>category_grouped_recommendations</code></strong></p>
+              </div>
+            </article>
 						<div class="resume-wrap d-flex ftco-animate">
   <div class="icon d-flex align-items-center justify-content-center">
     <span class="flaticon-ideas"></span>
@@ -481,61 +520,7 @@
         </div>
       </div>
 
-      <!-- 2~6. 진행 예정 슬롯 -->
-      <div class="col-md-4">
-        <div class="project img ftco-animate d-flex justify-content-center align-items-center"
-          style="background-image: none; background-color: #f8f9fa;">
-          <div class="overlay"></div>
-          <div class="text text-center p-4">
-            <h3>Side Project #2</h3>
-            <span>진행 예정입니다.</span>
-          </div>
-        </div>
-      </div>
 
-      <div class="col-md-4">
-        <div class="project img ftco-animate d-flex justify-content-center align-items-center"
-          style="background-image: none; background-color: #f8f9fa;">
-          <div class="overlay"></div>
-          <div class="text text-center p-4">
-            <h3>Side Project #3</h3>
-            <span>진행 예정입니다.</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="project img ftco-animate d-flex justify-content-center align-items-center"
-          style="background-image: none; background-color: #f8f9fa;">
-          <div class="overlay"></div>
-          <div class="text text-center p-4">
-            <h3>Side Project #4</h3>
-            <span>진행 예정입니다.</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="project img ftco-animate d-flex justify-content-center align-items-center"
-          style="background-image: none; background-color: #f8f9fa;">
-          <div class="overlay"></div>
-          <div class="text text-center p-4">
-            <h3>Side Project #5</h3>
-            <span>진행 예정입니다.</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="project img ftco-animate d-flex justify-content-center align-items-center"
-          style="background-image: none; background-color: #f8f9fa;">
-          <div class="overlay"></div>
-          <div class="text text-center p-4">
-            <h3>Side Project #6</h3>
-            <span>진행 예정입니다.</span>
-          </div>
-        </div>
-      </div>
     </div>
 
   </div>
